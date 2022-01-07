@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
-            android:text="Bui Xuan Huynh"
+            android:text="@string/full_name"
             android:textAlignment="center"
             android:textColor="#FF5722"
             android:textFontWeight="600"
@@ -39,14 +39,14 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Student Code: B1606894"
+            android:text="@string/student_code"
             android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email: buixuanhuynha1@gmail.com"
+            android:text="@string/email"
             android:textAlignment="center" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
