@@ -16,60 +16,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="76dp" />
-
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="313dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Example of Broadcast"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Example of services"
             android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/imageButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="40dp"
             android:text="Tutorials point "
             android:textColor="#ff87ff09"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_above="@+id/imageButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp" />
 
         <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:layout_width="192dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher_background"
             android:layout_centerVertical="true"
-            android:contentDescription="contHehe"
-            android:src="@drawable/ic_launcher_background" />
+            android:layout_centerHorizontal="true" />
 
         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="Broadcast Intent"
+            android:onClick="broadcastIntent"
             android:layout_below="@+id/imageButton"
-            android:layout_centerHorizontal="true"
-            android:onClick="startService"
-            android:text="Start Services" />
+            android:layout_centerHorizontal="true" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/button2"
-            android:layout_alignStart="@+id/button2"
-            android:layout_alignLeft="@+id/button2"
-            android:layout_alignEnd="@+id/button2"
-            android:layout_alignRight="@+id/button2"
-            android:onClick="stopService"
-            android:text="Stop Services" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

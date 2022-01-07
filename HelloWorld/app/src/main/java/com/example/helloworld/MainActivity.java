@@ -19,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
         Log.d(msg, "The onCreate() event");
     }
 
+    // broadcast a custom intent.
+
+    public void broadcastIntent(View view){
+        Intent intent = new Intent();
+        Log.d(msg, "broastcast");
+        intent.setAction("com.example.helloworld.CUSTOM_INTENT"); sendBroadcast(intent);
+    }
+
     public void startService(View view) {
         startService(new Intent(getBaseContext(), MyService.class));
     }

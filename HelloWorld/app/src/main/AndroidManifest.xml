@@ -16,9 +16,17 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </activity>
         <service android:name=".MyService" />
+        <receiver android:name=".MyBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                 <action android:name="com.example.helloworld.CUSTOM_INTENT" />
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>
