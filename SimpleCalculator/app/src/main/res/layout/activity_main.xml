@@ -10,40 +10,65 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g1"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        />
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/g2"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        />
 
     <Button
         android:id="@+id/b1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="B1"
-        app:layout_constraintLeft_toLeftOf="@id/g2"
+        app:layout_constraintBottom_toTopOf="@id/b5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toLeftOf="@id/b2"
+        app:layout_constraintTop_toBottomOf="@id/b4" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="B2"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@id/b1"
+        app:layout_constraintRight_toLeftOf="@id/b3"
+ />
+
+    <Button
+
+        android:id="@+id/b3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="B3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/b2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/g1"
         app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintHorizontal_weight="2"
+
+
         />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B4"
+    app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintBottom_toTopOf="@id/b1"
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/b2"
-        android:text="B2"
+        android:id="@+id/b5"
+        android:text="B5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/b1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="@id/g2"
-
-        />
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
