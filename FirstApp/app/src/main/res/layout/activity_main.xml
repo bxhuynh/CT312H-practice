@@ -2,51 +2,137 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/layout"
-        android:layout_width="410dp"
-        android:layout_height="506dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/design_default_color_on_primary"
+        android:showDividers="middle|beginning|end"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="243dp"
-            app:srcCompat="@mipmap/avatar_foreground" />
+            android:layout_height="match_parent"
+            android:layout_gravity="fill_horizontal"
+            android:paddingVertical="12dp">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/full_name"
-            android:textAlignment="center"
-            android:textColor="#FF5722"
-            android:textFontWeight="600"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Number A" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/student_code"
-            android:textAlignment="center" />
+            <EditText
+                android:id="@+id/textInput_numberA"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:editable="true"
+                android:ems="10"
+                android:hint="Enter number a"
+                android:inputType="textPersonName" />
+        </TableRow>
 
-        <TextView
-            android:id="@+id/textView4"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/email"
-            android:textAlignment="center" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Number B" />
+
+            <EditText
+                android:id="@+id/textInput_numberB"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="Enter number b"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="Result" />
+
+            <EditText
+                android:id="@+id/textView_result"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:clickable="false"
+                android:defaultFocusHighlightEnabled="false"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetRight="4dp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetRight="4dp"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/btnMultiple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="*" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetRight="4dp"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/btnCombine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetRight="4dp"
+                android:text="Combine" />
+
+        </TableRow>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
