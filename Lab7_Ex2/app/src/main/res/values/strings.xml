@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Lab7_Ex2_DeclarationOfMedical</string>
+    <string name="logo_description">Logo of Ministry of Health</string>
+    <string name="tv_full_name">Full name</string>
+    <string name="et_full_name_hint">Enter your full name</string>
+    <string name="tv_address">Address</string>
+    <string name="et_address_hint">Enter your address</string>
+    <string name="tv_phone">Phone number</string>
+    <string name="et_phone_hint">Enter your phone number</string>
+    <string name="rg_gender">Gender</string>
+    <string name="rb_male">Male</string>
+    <string name="rb_female">Female</string>
+    <string name="tv_vaccine">Vaccine Information</string>
+    <string name="cb_first_dose">First Dose</string>
+    <string name="cb_second_dose">Second Dose</string>
+    <string name="cb_third_dose">Third Dose</string>
+    <string name="hint_first_dose_date">First Vaccine Dose Date</string>
+    <string name="hint_second_dose_date">Second Vaccine Dose Date</string>
+    <string name="hint_third_dose_date">Third Vaccine Dose Date</string>
+    <string name="btn_OK">OK</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="btn_goback">GO BACK</string>
+</resources>
