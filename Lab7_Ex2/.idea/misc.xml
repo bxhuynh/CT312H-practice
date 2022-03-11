@@ -5,8 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_declaration_results.xml" value="0.2109375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34375" />
+        <entry key="app/src/main/res/layout/context_menu_view.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/declaration_results_view.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/layout/menu.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/result_item_view.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/menu/menu_list.xml" value="0.28020833333333334" />
       </map>
     </option>
   </component>

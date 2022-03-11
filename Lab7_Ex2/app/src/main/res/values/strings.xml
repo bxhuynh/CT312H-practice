@@ -20,4 +20,6 @@
     <string name="btn_OK">OK</string>
     <string name="btn_cancel">CANCEL</string>
     <string name="btn_goback">GO BACK</string>
+    <string name="menu_nth">Do nothing</string>
+    <string name="menu_delete">Delete</string>
 </resources>
