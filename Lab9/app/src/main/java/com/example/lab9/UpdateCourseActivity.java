@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class UpdateCourseActivity extends AppCompatActivity {
     // variables for our edit text, button, strings and dbhandler class.
     private EditText courseNameEdt, courseTracksEdt, courseDurationEdt, courseDescriptionEdt;
-    private Button updateCourseBtn;
+    private Button updateCourseBtn, deleteCourseBtn;
     private DBHandler dbHandler;
     String courseName, courseDesc, courseDuration, courseTracks;
     @Override
@@ -26,6 +26,7 @@ public class UpdateCourseActivity extends AppCompatActivity {
         courseDurationEdt = findViewById(R.id.idEdtCourseDuration);
         courseDescriptionEdt = findViewById(R.id.idEdtCourseDescription);
         updateCourseBtn = findViewById(R.id.idBtnUpdateCourse);
+        deleteCourseBtn = findViewById(R.id.idBtnDelete);
 
         // on below line we are initialing our dbhandler class.
         dbHandler = new DBHandler(UpdateCourseActivity.this);
@@ -57,6 +58,19 @@ public class UpdateCourseActivity extends AppCompatActivity {
                 Toast.makeText(UpdateCourseActivity.this, "Course Updated..", Toast.LENGTH_SHORT).show();
 
                 // launching our main activity.
+                Intent i = new Intent(UpdateCourseActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        // adding on click listener for delete button to delete our course.
+        deleteCourseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // calling a method to delete our course.
+                dbHandler.deleteCourse(courseName);
+                Toast.makeText(UpdateCourseActivity.this, "Deleted the course", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(UpdateCourseActivity.this, MainActivity.class);
                 startActivity(i);
             }
