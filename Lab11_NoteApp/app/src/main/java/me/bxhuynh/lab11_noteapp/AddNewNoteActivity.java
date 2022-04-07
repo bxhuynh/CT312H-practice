@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class AddNewNoteActivity extends AppCompatActivity {
-    Button btnCancel, btnAdd;
+    Button btnCancel, btnAdd ;
+    ImageButton addSave, addBack;
     EditText etTitle, etContent;
     DBHandler dbHandler;
     @Override
@@ -35,18 +37,39 @@ public class AddNewNoteActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String title = etTitle.getText().toString();
-                String content = etContent.getText().toString();
-                if (title.equals("") || content.equals("")) {
-                    Toast.makeText(AddNewNoteActivity.this, "Please enter both title and content.", Toast.LENGTH_SHORT).show();
-                } else {
-                    dbHandler.addNewNote(title, content);
-                    Toast.makeText(AddNewNoteActivity.this, "Added new note.", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(AddNewNoteActivity.this, MainActivity.class);
-                    startActivity(i);
-                }
+                onSave();
             }
         });
+
+        addBack = findViewById(R.id.editBack);
+        addSave = findViewById(R.id.editDelete);
+
+        addBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        addSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onSave();
+            }
+        });
+    }
+
+    public void onSave() {
+        String title = etTitle.getText().toString();
+        String content = etContent.getText().toString();
+        if (title.equals("") || content.equals("")) {
+            Toast.makeText(AddNewNoteActivity.this, "Please enter both title and content.", Toast.LENGTH_SHORT).show();
+        } else {
+            dbHandler.addNewNote(title, content);
+            Toast.makeText(AddNewNoteActivity.this, "Added new note.", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(AddNewNoteActivity.this, MainActivity.class);
+            startActivity(i);
+        }
     }
 
     @Override

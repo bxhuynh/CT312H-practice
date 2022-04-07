@@ -4,24 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
+
     tools:context=".EditNoteActivity">
+
+    <include layout="@layout/actionbar_edit" android:id="@+id/action_bar_edit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
+        android:padding="16dp"
+
         android:text="TITLE"
         android:theme="@style/header_text"
         app:layout_constraintBottom_toTopOf="@+id/et_editTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/action_bar_edit" />
 
     <EditText
         android:id="@+id/et_editTitle"
         android:layout_width="0dp"
+        android:layout_marginHorizontal="16dp"
         android:layout_height="wrap_content"
         android:background="@drawable/outlined_input"
         android:ems="10"
@@ -35,6 +43,8 @@
 
     <TextView
         android:id="@+id/tv_contentLabel"
+
+        android:layout_marginHorizontal="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="24dp"
@@ -47,6 +57,8 @@
 
     <EditText
         android:id="@+id/et_editContent"
+
+        android:layout_marginHorizontal="16dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -73,6 +85,9 @@
         app:layout_constraintEnd_toStartOf="@+id/btnEdit"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintTop_toTopOf="@+id/btnEdit" />
 
     <Button
@@ -80,6 +95,8 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
