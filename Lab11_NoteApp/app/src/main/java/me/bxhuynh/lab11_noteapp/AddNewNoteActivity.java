@@ -2,6 +2,7 @@ package me.bxhuynh.lab11_noteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,8 +22,8 @@ public class AddNewNoteActivity extends AppCompatActivity {
 
         btnCancel = findViewById(R.id.btnCancelCreate);
         btnAdd = findViewById(R.id.btnCreate);
-        etTitle = findViewById(R.id.etNoteTitle);
-        etContent =findViewById(R.id.etNoteContent);
+        etTitle = findViewById(R.id.et_editTitle);
+        etContent = findViewById(R.id.et_editContent);
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +42,8 @@ public class AddNewNoteActivity extends AppCompatActivity {
                 } else {
                     dbHandler.addNewNote(title, content);
                     Toast.makeText(AddNewNoteActivity.this, "Added new note.", Toast.LENGTH_SHORT).show();
-                    finish();
+                    Intent i = new Intent(AddNewNoteActivity.this, MainActivity.class);
+                    startActivity(i);
                 }
             }
         });
