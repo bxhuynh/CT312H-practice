@@ -48,4 +48,14 @@
         android:text="Add employee details"
         android:textAllCaps="false" />
 
+    <!--Button for displaying data from Firebase-->
+    <Button
+        android:id="@+id/idBtnShowData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnSendData"
+        android:layout_margin="10dp"
+        android:text="Show employee details"
+        android:textAllCaps="false" />
+
 </RelativeLayout>

@@ -3,6 +3,7 @@ package me.bxhuynh.lab12;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -19,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     private EditText employeeNameEdt, employeePhoneEdt, employeeAddressEdt;
-    private Button sendDatabtn;
+    private Button sendDatabtn, showDataBtn;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     EmployeeInfo employeeInfo;
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         databaseReference = firebaseDatabase.getReference("EmployeeInfo");
         employeeInfo = new EmployeeInfo();
         sendDatabtn = findViewById(R.id.idBtnSendData);
+        showDataBtn = findViewById(R.id.idBtnShowData);
+
+        showDataBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, EmployeeActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         sendDatabtn.setOnClickListener(new View.OnClickListener() {
             @Override
