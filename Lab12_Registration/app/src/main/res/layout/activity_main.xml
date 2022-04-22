@@ -40,7 +40,7 @@
     <EditText
         android:id="@+id/et_fname"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:height="50dp"
         android:background="@drawable/outlined_input"
@@ -59,7 +59,7 @@
         android:id="@+id/et_username"
 
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:height="50dp"
         android:background="@drawable/outlined_input"
         android:ems="10"
@@ -77,7 +77,7 @@
         android:id="@+id/et_email"
 
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:height="50dp"
         android:background="@drawable/outlined_input"
         android:ems="10"
@@ -93,7 +93,7 @@
     <EditText
         android:id="@+id/et_phone"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:height="50dp"
         android:background="@drawable/outlined_input"
         android:ems="10"
@@ -109,7 +109,7 @@
     <EditText
         android:id="@+id/et_password"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:height="50dp"
         android:background="@drawable/outlined_input"
         android:ems="10"
