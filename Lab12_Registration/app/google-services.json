@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986023181226",
+    "firebase_url": "https://lab12-c4d82-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "lab12-c4d82",
+    "storage_bucket": "lab12-c4d82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986023181226:android:39aa6418e8b5f0f6d009d3",
+        "android_client_info": {
+          "package_name": "me.bxhuynh.lab12_registration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986023181226-1f0ic9fohr225uicd1imvav5a6nvcdgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfTytWjGAHz4CmSKg8akl6wZeDkx2Nimo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986023181226-1f0ic9fohr225uicd1imvav5a6nvcdgf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
